@@ -59,6 +59,6 @@ To run the project on your machine:
 
 ## 📬 Contact & Connect
 
-- **Email**: [sabrha@usiu.ac.ke](mailto:sabrha@usiu.ac.ke)
-- **LinkedIn**: [Samuel Abrha](https://linkedin.com)
+- **Email**: [abrhsamuel@gmail.com](mailto:abrhsamuel@gmail.com)
+- **LinkedIn**: [Samuel Abrha](https://www.linkedin.com/in/samuelabrha/)
 - **GitHub**: [@SamAbr](https://github.com/SamAbr)

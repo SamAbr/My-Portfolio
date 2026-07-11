@@ -2014,4 +2014,270 @@ section {
     .lang-item { display: flex !important; justify-content: space-between !important; }
     .lang-dots { display: none !important; }
     .interest-tag { border: 1px solid #cccccc !important; padding: 2px 8px !important; color: #000000 !important; background: none !important; }
+
+}
+
+/* ==========================================================================
+   Certifications Dedicated Page Dashboard & Controls
+   ========================================================================== */
+.certs-page .certs-hero-section {
+    padding: 140px 0 40px 0;
+}
+
+.certs-page .certs-dashboard-section {
+    padding: 20px 0 80px 0;
+}
+
+.dashboard-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-glass);
+}
+
+@media (min-width: 768px) {
+    .dashboard-controls {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.search-box-wrapper {
+    position: relative;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .search-box-wrapper {
+        max-width: 450px;
+    }
+}
+
+.search-box-wrapper .search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    pointer-events: none;
+}
+
+.search-box-wrapper input {
+    width: 100%;
+    padding: 14px 16px 14px 48px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-glass);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.search-box-wrapper input:focus {
+    outline: none;
+    border-color: rgba(var(--accent-cyan-rgb), 0.4);
+    box-shadow: 0 0 15px rgba(var(--accent-cyan-rgb), 0.15);
+}
+
+.filter-controls-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+@media (min-width: 992px) {
+    .filter-controls-wrapper {
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+    }
+}
+
+.filter-controls-wrapper .filter-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-buttons .filter-btn {
+    padding: 8px 18px;
+    border-radius: 30px;
+    border: 1px solid var(--border-glass);
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filter-buttons .filter-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(var(--accent-purple-rgb), 0.25);
+    color: var(--text-primary);
+}
+
+.filter-buttons .filter-btn.active {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    color: #ffffff;
+    box-shadow: var(--shadow-glow);
+}
+
+/* Certifications CTA Card in index.html */
+.certs-cta-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 40px;
+    border: 1px solid var(--border-glass);
+    align-items: center;
+    background: linear-gradient(135deg, rgba(var(--accent-cyan-rgb), 0.02) 0%, rgba(var(--accent-purple-rgb), 0.02) 100%), var(--bg-glass);
+}
+
+@media (min-width: 768px) {
+    .certs-cta-card {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+.certs-cta-visual {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certs-visual-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.visual-badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transform: rotate(-3deg);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.visual-badge.data-sci {
+    color: var(--accent-cyan);
+    border-color: rgba(var(--accent-cyan-rgb), 0.25);
+    transform: rotate(-6deg) translateX(-10px);
+}
+
+.visual-badge.db {
+    color: var(--accent-purple);
+    border-color: rgba(var(--accent-purple-rgb), 0.25);
+    transform: rotate(3deg) translateX(10px);
+}
+
+.visual-badge.secure {
+    color: #10b981;
+    border-color: rgba(16, 185, 129, 0.25);
+    transform: rotate(-1deg);
+}
+
+.certs-visual-count {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-glow);
+    animation: pulse-ring 4s ease-in-out infinite;
+}
+
+.certs-visual-count .count-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+.certs-visual-count .count-lbl {
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.certs-cta-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media (max-width: 767px) {
+    .certs-cta-info {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.certs-cta-info h3 {
+    font-size: 1.8rem;
+    font-family: 'Space Grotesk', sans-serif;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.certs-cta-info p {
+    color: var(--text-secondary);
+    max-width: 600px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.certs-cta-info .cta-btn {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+@media (max-width: 767px) {
+    .certs-cta-info .cta-btn {
+        align-self: center;
+    }
 }

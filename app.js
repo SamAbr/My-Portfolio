@@ -230,33 +230,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const timelineExperience = document.getElementById('timeline-experience');
     const timelineEducation = document.getElementById('timeline-education');
 
-    btnExperience.addEventListener('click', () => {
-        btnExperience.classList.add('active');
-        btnEducation.classList.remove('active');
-        
-        timelineEducation.classList.remove('active');
-        setTimeout(() => {
-            timelineEducation.style.display = 'none';
-            timelineExperience.style.display = 'block';
+    if (btnExperience && btnEducation) {
+        btnExperience.addEventListener('click', () => {
+            btnExperience.classList.add('active');
+            btnEducation.classList.remove('active');
+            
+            timelineEducation.classList.remove('active');
             setTimeout(() => {
-                timelineExperience.classList.add('active');
-            }, 50);
-        }, 300);
-    });
+                timelineEducation.style.display = 'none';
+                timelineExperience.style.display = 'block';
+                setTimeout(() => {
+                    timelineExperience.classList.add('active');
+                }, 50);
+            }, 300);
+        });
 
-    btnEducation.addEventListener('click', () => {
-        btnEducation.classList.add('active');
-        btnExperience.classList.remove('active');
-        
-        timelineExperience.classList.remove('active');
-        setTimeout(() => {
-            timelineExperience.style.display = 'none';
-            timelineEducation.style.display = 'block';
+        btnEducation.addEventListener('click', () => {
+            btnEducation.classList.add('active');
+            btnExperience.classList.remove('active');
+            
+            timelineExperience.classList.remove('active');
             setTimeout(() => {
-                timelineEducation.classList.add('active');
-            }, 50);
-        }, 300);
-    });
+                timelineExperience.style.display = 'none';
+                timelineEducation.style.display = 'block';
+                setTimeout(() => {
+                    timelineEducation.classList.add('active');
+                }, 50);
+            }, 300);
+        });
+    }
 
 
     // --- PROJECT FILTERS ---
@@ -434,14 +436,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close Modal Events
     function closeModal() {
-        modalOverlay.classList.remove('open');
-        document.body.style.overflow = 'auto'; // Re-enable background scrolling
+        if (modalOverlay) {
+            modalOverlay.classList.remove('open');
+            document.body.style.overflow = 'auto'; // Re-enable background scrolling
+        }
     }
 
-    modalCloseBtn.addEventListener('click', closeModal);
-    modalOverlay.addEventListener('click', (e) => {
-        if (e.target === modalOverlay) closeModal();
-    });
+    if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', closeModal);
+    }
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) closeModal();
+        });
+    }
     window.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             closeModal();
@@ -630,14 +638,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close Cert Modal
     function closeCertModal() {
-        certModalOverlay.classList.remove('open');
-        document.body.style.overflow = 'auto';
+        if (certModalOverlay) {
+            certModalOverlay.classList.remove('open');
+            document.body.style.overflow = 'auto';
+        }
     }
 
-    certModalCloseBtn.addEventListener('click', closeCertModal);
-    certModalOverlay.addEventListener('click', (e) => {
-        if (e.target === certModalOverlay) closeCertModal();
-    });
+    if (certModalCloseBtn) {
+        certModalCloseBtn.addEventListener('click', closeCertModal);
+    }
+    if (certModalOverlay) {
+        certModalOverlay.addEventListener('click', (e) => {
+            if (e.target === certModalOverlay) closeCertModal();
+        });
+    }
 
 
     // --- STATS COUNT UP ANIMATION ---

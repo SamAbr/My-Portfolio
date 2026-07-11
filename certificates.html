@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Certifications and Credentials of Samuel Abrha Gebremariam. Data Science, SQL Databases, Cybersecurity, and Leadership.">
+    <meta name="author" content="Samuel Abrha Gebremariam">
+    <title>Certifications & Achievements | Samuel Abrha Gebremariam</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="certs-page">
+    <!-- Background Canvas for Interactive Data Particles -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="main-header glass">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-accent">&lt;</span>Sam.Abr<span class="logo-accent"> /&gt;</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="index.html#contact" class="nav-link nav-btn-contact">Get in Touch</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay">
+        <button class="close-mobile-nav" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
+        <nav class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="index.html#about" class="mobile-nav-link">About</a>
+            <a href="index.html#skills" class="mobile-nav-link">Skills</a>
+            <a href="index.html#projects" class="mobile-nav-link">Projects</a>
+            <a href="index.html#contact" class="mobile-nav-link">Get in Touch</a>
+        </nav>
+    </div>
+
+    <!-- Certifications Dashboard Hero -->
+    <section class="certs-hero-section">
+        <div class="container text-center">
+            <span class="section-tagline">Academic & Professional Credentials</span>
+            <h1 class="section-title">Certifications Gallery</h1>
+            <div class="underline"></div>
+            <p class="section-desc max-width-600">
+                A verified collection of certifications, training completions, and academic honors in Data Science, Machine Learning, Database engineering, and Cybersecurity.
+            </p>
+        </div>
+    </section>
+
+    <!-- Interactive Filter & Search Dashboard -->
+    <section class="certs-dashboard-section">
+        <div class="container">
+            <div class="dashboard-controls glass">
+                <!-- Search Bar -->
+                <div class="search-box-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="cert-search" placeholder="Search certifications by name, skills or issuer...">
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="filter-controls-wrapper">
+                    <span class="filter-label"><i class="fa-solid fa-sliders"></i> Filter:</span>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All (12)</button>
+                        <button class="filter-btn" data-filter="datascience">Data Science & ML</button>
+                        <button class="filter-btn" data-filter="database">Databases & SQL</button>
+                        <button class="filter-btn" data-filter="security">Security & Networking</button>
+                        <button class="filter-btn" data-filter="professional">Professional Skills</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications Grid -->
+            <div class="certs-grid" id="gallery-grid" style="margin-top: 30px;">
+                <!-- ASR Hackathon -->
+                <div class="cert-card glass highlight-cert clickable-cert" data-category="professional datascience" data-cert="asr" data-cert-file="certificates/asr_hackathon.jpg">
+                    <div class="cert-img-wrapper">
+                        <img src="certificates/asr_hackathon.jpg" alt="ASR Hackathon Participant" class="cert-preview-img">
+                    </div>
+                    <div class="cert-card-info">
+                        <h4>ASR Hackathon Participant</h4>
+                        <span class="cert-issuer">Google Crowdsource / USIU-Africa</span>
+                    </div>
+                </div>
+
+                <!-- AI Career Essentials -->
+                <div class="cert-card glass clickable-cert" data-category="professional" data-cert="ai_career">
+                    <div class="cert-img-wrapper fallback-wrapper">
+                        <i class="fa-solid fa-graduation-cap cert-fallback-icon"></i>
+                        <span class="cert-fallback-badge">Digital Credential</span>
+                    </div>
+                    <div class="cert-card-info">
+                        <h4>AI Career Essentials</h4>
+                        <span class="cert-issuer">ALX / Career Essentials</span>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity Essentials -->
+                <div class="cert-card glass clickable-cert" data-category="security" data-cert="cyber_essentials" data-cert-file="certificates/cybersecurity_essentials.png">
+                    <div class="cert-img-wrapper">
+                        <img src="certificates/cybersecurity_essentials.png" alt="Cybersecurity Essentials" class="cert-preview-img">
+                    </div>
+                    <div class="cert-card-info">
+                        <h4>Cybersecurity Essentials</h4>
+                        <span class="cert-issuer">Cisco Networking Academy</span>
+                    </div>
+                </div>
+
+                <!-- Introduction to Python -->
+                <div class="cert-card glass clickable-cert" data-category="datascience" data-cert="intro_python" data-cert-file="certificates/introduction_to_python.png">
+                    <div class="cert-img-wrapper">
+                        <img src="certificates/introduction_to_python.png" alt="Introduction to Python" class="cert-preview-img">
+                    </div>
+                    <div class="cert-card-info">
+                        <h4>Introduction to Python</h4>
+                        <span class="cert-issuer">Datacamp Credentials</span>
+                    </div>
+                </div>
+
+                <!-- Data Manipulation with Pandas -->
+                <div class="cert-card glass clickable-cert" data-category="datascience" data-cert="pandas" data-cert-file="certificates/data_manipulation_pandas.png">
+                    <div class="cert-img-wrapper">
+                        <img src="certificates/data_manipulation_pandas.png" alt="Data Manipulation (Pandas)" class="cert-preview-img">
+                    </div>
+                    <div class="cert-card-info">
+                        <h4>Data Manipulation (Pandas)</h4>
+                        <span class="cert-issuer">Datacamp Credentials</span>
+                    </div>
+                </div>
+
+                <!-- Introduction to SQL -->
+                <div class="cert-card glass clickable-cert" data-category="database" data-cert="intro_sql" data-cert-file="certificates/introduction_to_sql.png">
+                    <div class="cert-img-wrapper">
+                        <img src="certificates/introduction_to_sql.png" alt="Introduction to SQL" class="cert-preview-img">
+                    </div>
+                    <div class="cert-card-info">
+                        <h4>Introduction to SQL</h4>
+                        <span class="cert-issuer">Datacamp Credentials</span>
+                    </div>
+                </div>
+
+                <!-- Intermediate SQL -->
+                <div class="cert-card glass clickable-cert" data-category="database" data-cert="inter_sql" data-cert-file="certificates/intermediate_sql.png">
+                    <div class="cert-img-wrapper">
+                        <img src="certificates/intermediate_sql.png" alt="Intermediate SQL" class="cert-preview-img">
+                    </div>
+                    <div class="cert-card-info">
+                        <h4>Intermediate SQL</h4>
+                        <span class="cert-issuer">Datacamp Credentials</span>
+                    </div>
+                </div>
+
+                <!-- Cleaning Data in R -->
+                <div class="cert-card glass clickable-cert" data-category="datascience" data-cert="cleaning_r">
+                    <div class="cert-img-wrapper fallback-wrapper">
+                        <i class="fa-solid fa-r cert-fallback-icon"></i>
+                        <span class="cert-fallback-badge">Digital Credential</span>
+                    </div>
+                    <div class="cert-card-info">
+                        <h4>Cleaning Data in R</h4>
+                        <span class="cert-issuer">Datacamp Credentials</span>
+                    </div>
+                </div>
+
+                <!-- Data Manipulation with dplyr -->
+                <div class="cert-card glass clickable-cert" data-category="datascience" data-cert="dplyr" data-cert-file="certificates/data_manipulation_dplyr.png">
+                    <div class="cert-img-wrapper">
+                        <img src="certificates/data_manipulation_dplyr.png" alt="Data Manipulation (DPLYR)" class="cert-preview-img">
+                    </div>
+                    <div class="cert-card-info">
+                        <h4>Data Manipulation (DPLYR)</h4>
+                        <span class="cert-issuer">Datacamp Credentials</span>
+                    </div>
+                </div>
+
+                <!-- Introduction to Power BI -->
+                <div class="cert-card glass clickable-cert" data-category="datascience" data-cert="powerbi" data-cert-file="certificates/introduction_to_powerbi.png">
+                    <div class="cert-img-wrapper">
+                        <img src="certificates/introduction_to_powerbi.png" alt="Introduction to Power BI" class="cert-preview-img">
+                    </div>
+                    <div class="cert-card-info">
+                        <h4>Introduction to Power BI</h4>
+                        <span class="cert-issuer">Datacamp Credentials</span>
+                    </div>
+                </div>
+
+                <!-- Transformative Leadership -->
+                <div class="cert-card glass clickable-cert" data-category="professional" data-cert="leadership" data-cert-file="certificates/transformative_leadership.jpg">
+                    <div class="cert-img-wrapper">
+                        <img src="certificates/transformative_leadership.jpg" alt="Transformative Leadership" class="cert-preview-img">
+                    </div>
+                    <div class="cert-card-info">
+                        <h4>Transformative Leadership</h4>
+                        <span class="cert-issuer">USIU-Africa Training</span>
+                    </div>
+                </div>
+
+                <!-- Dean's List Achiever -->
+                <div class="cert-card glass highlight-cert clickable-cert" data-category="professional" data-cert="deans_list" data-cert-file="certificates/deans_list_achiever.png">
+                    <div class="cert-img-wrapper">
+                        <img src="certificates/deans_list_achiever.png" alt="Dean's List Achiever" class="cert-preview-img">
+                    </div>
+                    <div class="cert-card-info">
+                        <h4>Dean's List Achiever</h4>
+                        <span class="cert-issuer">USIU-Africa Academic Honors</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="no-results-msg" class="glass text-center" style="display: none; padding: 40px; border-radius: 12px; margin-top: 30px;">
+                <i class="fa-solid fa-folder-open" style="font-size: 3rem; color: var(--text-muted); margin-bottom: 15px;"></i>
+                <h3>No Certifications Found</h3>
+                <p style="color: var(--text-muted);">Try adjusting your search query or switching categories.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Direct Large Verification View (LightBox Modal) -->
+    <div id="cert-modal" class="modal-overlay">
+        <div class="cert-modal-card glass">
+            <button class="cert-modal-close-btn" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
+            <div id="cert-modal-content-body">
+                <!-- Injected dynamically by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Imports -->
+    <script src="app.js"></script>
+    <script src="certificates.js"></script>
+</body>
+</html>
