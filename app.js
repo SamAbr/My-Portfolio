@@ -619,11 +619,6 @@ document.addEventListener('DOMContentLoaded', () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="real-view-actions" style="display: flex; justify-content: center; margin-top: 15px;">
-                            <a href="https://drive.google.com/drive/folders/samuel-credentials-placeholder" target="_blank" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; font-size: 0.9rem; background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass);">
-                                <i class="fa-brands fa-google-drive" style="color: #34a853;"></i> View Folder on Google Drive
-                            </a>
-                        </div>
                     `;
                 }
 
