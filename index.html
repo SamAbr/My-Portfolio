@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Samuel Abrha Gebremariam - Aspiring Data Scientist. Experience in Machine Learning, Data Analytics, ETL pipelines, and Big Data Architecture.">
+    <meta name="author" content="Samuel Abrha Gebremariam">
+    <title>Samuel Abrha Gebremariam | Aspiring Data Scientist Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Interactive Data Particles -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="main-header glass">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">&lt;</span>Sam.Abr<span class="logo-accent"> /&gt;</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#timeline" class="nav-link">Timeline</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link nav-btn-contact">Get in Touch</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay glass">
+        <button class="close-mobile-nav"><i class="fa-solid fa-xmark"></i></button>
+        <nav class="mobile-nav-links">
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#skills" class="mobile-nav-link">Skills</a>
+            <a href="#timeline" class="mobile-nav-link">Timeline</a>
+            <a href="#projects" class="mobile-nav-link">Projects</a>
+            <a href="#certifications" class="mobile-nav-link">Certifications</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge hero-badge">
+                        <span class="badge-dot"></span> Available for Opportunities
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="highlight">Samuel Abrha Gebremariam</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        I am <span id="typed-text"></span><span class="cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        An Aspiring Data Scientist pursuing a BSc in Data Science and Analytics at USIU-Africa. I specialize in parsing large datasets, building robust ETL architectures, and translating complex mathematical patterns into interactive, actionable visual stories.
+                    </p>
+                    
+                    <div class="hero-ctas">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fa-solid fa-diagram-project"></i> View Projects
+                        </a>
+                        <a href="cv.pdf" target="_blank" class="btn btn-secondary">
+                            <i class="fa-solid fa-file-pdf"></i> Resume / CV
+                        </a>
+                    </div>
+
+                    <div class="social-links-container">
+                        <span class="social-label">Connect with me:</span>
+                        <div class="social-links">
+                            <a href="https://github.com/SamAbr" target="_blank" rel="noopener" class="social-icon-btn github" title="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/samuel-abrha" target="_blank" rel="noopener" class="social-icon-btn linkedin" title="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="mailto:abrhsamuel@gmail.com" class="social-icon-btn email" title="Email Samuel">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                            <a href="tel:+254701211210" class="social-icon-btn phone" title="Call Samuel">
+                                <i class="fa-solid fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image-container">
+                    <div class="avatar-glow-ring"></div>
+                    <div class="avatar-frame">
+                        <img src="avatar.jpg" alt="Samuel Abrha Gebremariam Profile" class="avatar-img">
+                    </div>
+                    <!-- Data Floating Cards -->
+                    <div class="floating-card stat-card-ml glass">
+                        <i class="fa-solid fa-brain accent-purple"></i>
+                        <div>
+                            <h4>Machine Learning</h4>
+                            <p>Regression & Clustering</p>
+                        </div>
+                    </div>
+                    <div class="floating-card stat-card-data glass">
+                        <i class="fa-solid fa-chart-line accent-cyan"></i>
+                        <div>
+                            <h4>Data Visualization</h4>
+                            <p>Power BI & Tableau</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <span class="mouse-scroll">
+                    <span class="wheel"></span>
+                </span>
+                <span class="scroll-text">Scroll to explore</span>
+            </div>
+        </section>
+
+        <!-- About & Stats Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">Who I Am</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text-column">
+                        <p class="about-p highlight-p">
+                            Data is the modern canvas of science, and I am passionate about drawing meaningful stories from it to enhance experiences and promote accessible education.
+                        </p>
+                        <p class="about-p">
+                            Currently, I am pursuing my <strong>BSc in Data Science and Analytics</strong> at the United States International University - Africa (USIU-Africa). My academic and project journeys have allowed me to build hands-on expertise with massive datasets, designing scalable pipelines, and coding robust solutions in Python, R, and SQL.
+                        </p>
+                        <p class="about-p">
+                            Prior to this, I completed coursework in <strong>Information Technology</strong> at Mekelle University, Ethiopia, which solidified my foundations in systems architecture, networks, Java, and C programming. Although my time there was disrupted by civil conflict, it instilled resilience and a relentless determination to solve real-world problems through logic and technology.
+                        </p>
+
+                        <div class="specialization-chips">
+                            <h4>Areas of Specialization</h4>
+                            <div class="chips-container">
+                                <span class="chip"><i class="fa-solid fa-chart-pie"></i> Data Analysis</span>
+                                <span class="chip"><i class="fa-solid fa-chart-column"></i> Data Visualization</span>
+                                <span class="chip"><i class="fa-solid fa-microchip"></i> Machine Learning</span>
+                                <span class="chip"><i class="fa-solid fa-calculator"></i> Statistics</span>
+                                <span class="chip"><i class="fa-solid fa-database"></i> Data Engineering (ETL)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-stats-column">
+                        <div class="stats-grid">
+                            <div class="stat-box glass">
+                                <span class="stat-number" data-target="6">0</span>
+                                <span class="stat-label">Complex Projects</span>
+                            </div>
+                            <div class="stat-box glass">
+                                <span class="stat-number" data-target="11">0</span>
+                                <span class="stat-label">Certifications</span>
+                            </div>
+                            <div class="stat-box glass">
+                                <span class="stat-number" data-target="4">0</span>
+                                <span class="stat-label">Languages Spoken</span>
+                            </div>
+                            <div class="stat-box glass">
+                                <span class="stat-number" data-target="90">0</span><span class="stat-percent">%</span>
+                                <span class="stat-label">Python Proficiency</span>
+                            </div>
+                        </div>
+
+                        <!-- Mini Code Console Box -->
+                        <div class="console-box glass">
+                            <div class="console-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="console-title">samuel_profile.py</span>
+                            </div>
+                            <div class="console-body">
+                                <pre><code><span class="keyword">import</span> pandas <span class="keyword">as</span> pd
+
+samuel = {
+    <span class="string">"role"</span>: <span class="string">"Data Scientist"</span>,
+    <span class="string">"focus"</span>: [<span class="string">"ML"</span>, <span class="string">"Analytics"</span>, <span class="string">"ETL"</span>],
+    <span class="string">"passion"</span>: <span class="string">"Accessible Education"</span>
+}
+
+<span class="keyword">def</span> <span class="function">transform_data</span>(raw_input):
+    <span class="keyword">return</span> pd.DataFrame(raw_input).clean().analyze()
+
+print(<span class="string">"Ready to drive impact!"</span>)</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">My Toolkit</span>
+                    <h2 class="section-title">Technical Expertise</h2>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="skills-wrapper">
+                    <!-- Tab Controls -->
+                    <div class="skills-tabs">
+                        <button class="tab-btn active" data-tab="programming">
+                            <i class="fa-solid fa-code"></i> Programming Languages
+                        </button>
+                        <button class="tab-btn" data-tab="dataml">
+                            <i class="fa-solid fa-gears"></i> Data & ML Techniques
+                        </button>
+                        <button class="tab-btn" data-tab="soft">
+                            <i class="fa-solid fa-people-group"></i> Soft & Leadership Skills
+                        </button>
+                    </div>
+
+                    <!-- Tab Contents -->
+                    <div class="tab-content active" id="programming">
+                        <div class="skills-grid-bars">
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-brands fa-python accent-cyan"></i> Python</span>
+                                    <span class="skill-val">90%</span>
+                                </div>
+                                <div class="bar-bg">
+                                    <div class="bar-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-solid fa-r accent-purple"></i> R Programming</span>
+                                    <span class="skill-val">80%</span>
+                                </div>
+                                <div class="bar-bg">
+                                    <div class="bar-fill" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-solid fa-file-invoice-dollar accent-yellow"></i> LaTeX</span>
+                                    <span class="skill-val">80%</span>
+                                </div>
+                                <div class="bar-bg">
+                                    <div class="bar-fill" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-solid fa-database accent-cyan"></i> SQL (Structured Queries)</span>
+                                    <span class="skill-val">70%</span>
+                                </div>
+                                <div class="bar-bg">
+                                    <div class="bar-fill" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-solid fa-square-root-variable accent-pink"></i> Matlab</span>
+                                    <span class="skill-val">60%</span>
+                                </div>
+                                <div class="bar-bg">
+                                    <div class="bar-fill" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-brands fa-java accent-red"></i> Java</span>
+                                    <span class="skill-val">50%</span>
+                                </div>
+                                <div class="bar-bg">
+                                    <div class="bar-fill" style="width: 50%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-brands fa-html5 accent-cyan"></i> HTML5 / CSS3</span>
+                                    <span class="skill-val">40%</span>
+                                </div>
+                                <div class="bar-bg">
+                                    <div class="bar-fill" style="width: 40%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="dataml">
+                        <div class="skills-grid-cards">
+                            <div class="skill-card glass">
+                                <div class="skill-card-icon"><i class="fa-solid fa-chart-pie accent-cyan"></i></div>
+                                <h3>Data Visualization</h3>
+                                <p>Tableau, Power BI, Seaborn, Matplotlib. Translating raw insights into dynamic, visual, executive dashboards.</p>
+                            </div>
+                            <div class="skill-card glass">
+                                <div class="skill-card-icon"><i class="fa-solid fa-network-wired accent-purple"></i></div>
+                                <h3>Machine Learning</h3>
+                                <p>Regression, Classification, Clustering, and Predictive Analytics models using Python sklearn and pandas.</p>
+                            </div>
+                            <div class="skill-card glass">
+                                <div class="skill-card-icon"><i class="fa-solid fa-arrow-down-up-lock accent-yellow"></i></div>
+                                <h3>ETL Pipelines</h3>
+                                <p>Structured ETL architecture. Extracting data, data manipulation (Pandas, DPLYR), loading into SQLite, Postgres or Spark environments.</p>
+                            </div>
+                            <div class="skill-card glass">
+                                <div class="skill-card-icon"><i class="fa-solid fa-diagram-project accent-pink"></i></div>
+                                <h3>Big Data Systems</h3>
+                                <p>Familiarity with Hadoop, Apache Spark, Kafka stream processing, and Medallion Lakehouse structures.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="soft">
+                        <div class="skills-grid-cards">
+                            <div class="skill-card glass">
+                                <div class="skill-card-icon"><i class="fa-solid fa-lightbulb accent-cyan"></i></div>
+                                <h3>Analytical Thinking</h3>
+                                <p>Strong math and logic foundation. Deconstructing complex operational problems into data hypothesis tests.</p>
+                            </div>
+                            <div class="skill-card glass">
+                                <div class="skill-card-icon"><i class="fa-solid fa-comments accent-purple"></i></div>
+                                <h3>Strong Communication</h3>
+                                <p>Ability to bridge the gap between technical data metrics and operational community/business stakeholders.</p>
+                            </div>
+                            <div class="skill-card glass">
+                                <div class="skill-card-icon"><i class="fa-solid fa-people-roof accent-yellow"></i></div>
+                                <h3>Leadership & Collaboration</h3>
+                                <p>Demonstrated in role as Ethiopian Community Representative and Araya Charity Club tutor. Elevating peers to build success.</p>
+                            </div>
+                            <div class="skill-card glass">
+                                <div class="skill-card-icon"><i class="fa-solid fa-display accent-pink"></i></div>
+                                <h3>Presentation Skills</h3>
+                                <p>Creating clear reports, charts, and visualizations to make data digestible for any target audience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section (Education & Experience) -->
+        <section id="timeline" class="timeline-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">My Journey</span>
+                    <h2 class="section-title">Education & Experience</h2>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="timeline-toggle-wrapper">
+                    <button class="timeline-toggle-btn active" id="btn-experience">
+                        <i class="fa-solid fa-briefcase"></i> Experience
+                    </button>
+                    <button class="timeline-toggle-btn" id="btn-education">
+                        <i class="fa-solid fa-graduation-cap"></i> Education
+                    </button>
+                </div>
+
+                <!-- Experiences Timeline -->
+                <div class="timeline-container active" id="timeline-experience">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"><i class="fa-solid fa-users"></i></div>
+                        <div class="timeline-content glass">
+                            <span class="timeline-date">2023 - Present</span>
+                            <h3>Community Representative</h3>
+                            <h4>Ethiopian Community of USIU-Africa</h4>
+                            <p>Advocate for community needs, coordinate large-scale events, and foster unity. Leverage dashboards and visualizations to demonstrate community metrics and improve planning outcomes.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"><i class="fa-solid fa-square-root-variable"></i></div>
+                        <div class="timeline-content glass">
+                            <span class="timeline-date">2023 - Present</span>
+                            <h3>Math Club Member</h3>
+                            <h4>USIU-Africa</h4>
+                            <p>Collaborate on challenging analytical assignments, host problem-solving peer review sessions, and foster continuous group learning in advanced statistics and quantitative analysis.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                        <div class="timeline-content glass">
+                            <span class="timeline-date">2019 - 2021</span>
+                            <h3>Volunteer Fundraiser</h3>
+                            <h4>Lola Children's Home</h4>
+                            <p>Spearheaded data tracking initiatives, analyzing donation distributions and donor trends to improve resource allocation efficiency for local child welfare programs.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"><i class="fa-solid fa-chalkboard-user"></i></div>
+                        <div class="timeline-content glass">
+                            <span class="timeline-date">2018 - 2021</span>
+                            <h3>Mathematics & CS Tutor</h3>
+                            <h4>Araya Charity Club</h4>
+                            <p>Provided tutoring to high school and early college students, structuring personalized lesson plans to foster core mathematical logic and programming foundations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Timeline -->
+                <div class="timeline-container" id="timeline-education">
+                    <div class="timeline-line"></div>
+
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <div class="timeline-content glass">
+                            <span class="timeline-date">2023 - 2026</span>
+                            <h3>BSc in Data Science and Analytics</h3>
+                            <h4>USIU-Africa (Nairobi, Kenya)</h4>
+                            <p>Intensive study of statistical methods, machine learning architectures, predictive analysis, and visual business dashboards. Emphasis on implementing data strategies for real-world impact.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"><i class="fa-solid fa-laptop-code"></i></div>
+                        <div class="timeline-content glass">
+                            <span class="timeline-date">2019 - 2021</span>
+                            <h3>BSc in Information Technology</h3>
+                            <h4>Mekelle University (Mekelle, Ethiopia)</h4>
+                            <p>Focused on computer systems, structural networking, databases, and programming languages (Java, C). Disrupted in 2021 due to civil conflict, paving the way for a transition to data science specialization.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"><i class="fa-solid fa-school"></i></div>
+                        <div class="timeline-content glass">
+                            <span class="timeline-date">2015 - 2019</span>
+                            <h3>High School Diploma</h3>
+                            <h4>Kallamino Special High School (Ethiopia)</h4>
+                            <p>Graduated from a highly selective, prestigious science-focused institution in Mekelle. Fostered initial passions for physics, math, logic, and computing paradigms.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">My Creations</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="underline"></div>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="python">Python</button>
+                    <button class="filter-btn" data-filter="datavis">Dashboards / Excel</button>
+                    <button class="filter-btn" data-filter="dataeng">Data Engineering / ML</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card glass" data-category="dataeng python">
+                        <div class="project-card-header">
+                            <span class="proj-tag"><i class="fa-brands fa-python"></i> Python</span>
+                            <span class="proj-tag"><i class="fa-solid fa-server"></i> Big Data</span>
+                        </div>
+                        <div class="project-card-body">
+                            <h3>Big Data Medallion Architecture</h3>
+                            <p>Designing a scalable three-tier lakehouse data warehouse (Bronze, Silver, Gold structure) to process stream analytics pipelines.</p>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn-project-detail" data-project="bigdata">Details <i class="fa-solid fa-circle-info"></i></button>
+                            <a href="https://github.com/SamAbr/Big-Data-Architecture" target="_blank" rel="noopener" class="btn-project-github" title="View Source Code"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass" data-category="python">
+                        <div class="project-card-header">
+                            <span class="proj-tag"><i class="fa-brands fa-python"></i> Python</span>
+                            <span class="proj-tag"><i class="fa-solid fa-chart-line"></i> Optimization</span>
+                        </div>
+                        <div class="project-card-body">
+                            <h3>Fantasy Premier League Optimization</h3>
+                            <p>An advanced linear optimization model using Python to construct the best possible squad maximizing expected FPL points.</p>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn-project-detail" data-project="fpl">Details <i class="fa-solid fa-circle-info"></i></button>
+                            <a href="https://github.com/SamAbr/FPL-Squad-Selection" target="_blank" rel="noopener" class="btn-project-github" title="View Source Code"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass" data-category="datavis">
+                        <div class="project-card-header">
+                            <span class="proj-tag"><i class="fa-solid fa-file-excel"></i> MS Excel</span>
+                            <span class="proj-tag"><i class="fa-solid fa-percent"></i> Financial Analysis</span>
+                        </div>
+                        <div class="project-card-body">
+                            <h3>Loan Default Analysis & Dashboard</h3>
+                            <p>Exploratory data analysis of commercial banking loans, building an interactive Excel dashboard to classify credit risks.</p>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn-project-detail" data-project="loan">Details <i class="fa-solid fa-circle-info"></i></button>
+                            <a href="https://github.com/SamAbr/Loan-Default-Analysis-And-Dashboard" target="_blank" rel="noopener" class="btn-project-github" title="View Source Code"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card glass" data-category="datavis">
+                        <div class="project-card-header">
+                            <span class="proj-tag"><i class="fa-solid fa-chart-simple"></i> Power BI</span>
+                            <span class="proj-tag"><i class="fa-solid fa-store"></i> Sales Analytics</span>
+                        </div>
+                        <div class="project-card-body">
+                            <h3>Sales Performance Dashboard</h3>
+                            <p>An interactive Power BI reporting system visualizing dynamic key performance indicators, customer segments, and revenue growth.</p>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn-project-detail" data-project="sales">Details <i class="fa-solid fa-circle-info"></i></button>
+                            <a href="https://github.com/SamAbr/Sales-And-Performance-Analysis-Dashboard" target="_blank" rel="noopener" class="btn-project-github" title="View Source Code"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card glass" data-category="dataeng python">
+                        <div class="project-card-header">
+                            <span class="proj-tag"><i class="fa-brands fa-python"></i> Python</span>
+                            <span class="proj-tag"><i class="fa-solid fa-database"></i> SQL ETL</span>
+                        </div>
+                        <div class="project-card-body">
+                            <h3>Data Warehousing ETL Pipeline</h3>
+                            <p>An end-to-end Python pipeline extracting, normalizing, transforming, and loading files into structured database warehouses.</p>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn-project-detail" data-project="etl">Details <i class="fa-solid fa-circle-info"></i></button>
+                            <a href="https://github.com/SamAbr/Data-warehousing" target="_blank" rel="noopener" class="btn-project-github" title="View Source Code"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card glass" data-category="python">
+                        <div class="project-card-header">
+                            <span class="proj-tag"><i class="fa-brands fa-python"></i> Python</span>
+                            <span class="proj-tag"><i class="fa-solid fa-basket-shopping"></i> Association Rules</span>
+                        </div>
+                        <div class="project-card-body">
+                            <h3>Association Rule Mining (Apriori)</h3>
+                            <p>Deploying simulated transaction dataset models to extract purchase patterns and correlations using the Apriori algorithm.</p>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn-project-detail" data-project="apriori">Details <i class="fa-solid fa-circle-info"></i></button>
+                            <a href="https://github.com/SamAbr/Association-Rule-Simulation" target="_blank" rel="noopener" class="btn-project-github" title="View Source Code"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certs-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">My Credentials</span>
+                    <h2 class="section-title">Certifications & Achievements</h2>
+                    <div class="underline"></div>
+                    <div class="certs-header-cta" style="margin-top: 20px; display: flex; justify-content: center;">
+                        <a href="https://drive.google.com/drive/folders/samuel-credentials-placeholder" target="_blank" class="btn btn-secondary" id="google-drive-certs-link" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem; padding: 10px 20px; border-radius: 30px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass);">
+                            <i class="fa-brands fa-google-drive" style="color: #34a853;"></i> View All on Google Drive
+                        </a>
+                    </div>
+                </div>
+
+                <div class="certs-grid">
+                    <div class="cert-card glass highlight-cert clickable-cert" data-cert="asr" data-cert-file="certificates/asr_hackathon.pdf">
+                        <div class="cert-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+                        <h4>ASR Hackathon Participant</h4>
+                        <span class="cert-issuer">Google Crowdsource / USIU-Africa</span>
+                    </div>
+                    <div class="cert-card glass clickable-cert" data-cert="ai_career" data-cert-file="certificates/ai_career_essentials.png">
+                        <div class="cert-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h4>AI Career Essentials</h4>
+                        <span class="cert-issuer">ALX / Career Essentials</span>
+                    </div>
+                    <div class="cert-card glass clickable-cert" data-cert="cyber_essentials">
+                        <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h4>Cybersecurity Essentials</h4>
+                        <span class="cert-issuer">Cisco Networking Academy</span>
+                    </div>
+                    <div class="cert-card glass clickable-cert" data-cert="intro_python">
+                        <div class="cert-icon"><i class="fa-brands fa-python"></i></div>
+                        <h4>Introduction to Python</h4>
+                        <span class="cert-issuer">Datacamp Credentials</span>
+                    </div>
+                    <div class="cert-card glass clickable-cert" data-cert="pandas">
+                        <div class="cert-icon"><i class="fa-solid fa-table-cells"></i></div>
+                        <h4>Data Manipulation (Pandas)</h4>
+                        <span class="cert-issuer">Datacamp Credentials</span>
+                    </div>
+                    <div class="cert-card glass clickable-cert" data-cert="intro_sql">
+                        <div class="cert-icon"><i class="fa-solid fa-database"></i></div>
+                        <h4>Introduction to SQL</h4>
+                        <span class="cert-issuer">Datacamp Credentials</span>
+                    </div>
+                    <div class="cert-card glass clickable-cert" data-cert="inter_sql">
+                        <div class="cert-icon"><i class="fa-solid fa-database"></i></div>
+                        <h4>Intermediate SQL</h4>
+                        <span class="cert-issuer">Datacamp Credentials</span>
+                    </div>
+                    <div class="cert-card glass clickable-cert" data-cert="cleaning_r" data-cert-file="certificates/cleaning_data_r.pdf">
+                        <div class="cert-icon"><i class="fa-solid fa-r"></i></div>
+                        <h4>Cleaning Data in R</h4>
+                        <span class="cert-issuer">Datacamp Credentials</span>
+                    </div>
+                    <div class="cert-card glass clickable-cert" data-cert="dplyr" data-cert-file="certificates/data_manipulation_dplyr.pdf">
+                        <div class="cert-icon"><i class="fa-solid fa-filter"></i></div>
+                        <h4>Data Manipulation (DPLYR)</h4>
+                        <span class="cert-issuer">Datacamp Credentials</span>
+                    </div>
+                    <div class="cert-card glass clickable-cert" data-cert="powerbi">
+                        <div class="cert-icon"><i class="fa-solid fa-chart-column"></i></div>
+                        <h4>Introduction to Power BI</h4>
+                        <span class="cert-issuer">Datacamp Credentials</span>
+                    </div>
+                    <div class="cert-card glass clickable-cert" data-cert="leadership">
+                        <div class="cert-icon"><i class="fa-solid fa-users-gear"></i></div>
+                        <h4>Transformative Leadership</h4>
+                        <span class="cert-issuer">USIU-Africa Training</span>
+                    </div>
+                    <div class="cert-card glass highlight-cert clickable-cert" data-cert="deans_list">
+                        <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                        <h4>Dean's List Achiever</h4>
+                        <span class="cert-issuer">USIU-Africa Academic Honors</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Languages & Interests Section -->
+        <section class="languages-interests-section">
+            <div class="container lang-int-grid">
+                <!-- Languages -->
+                <div class="languages-box glass">
+                    <h3 class="box-title"><i class="fa-solid fa-language"></i> Spoken Languages</h3>
+                    <div class="languages-list">
+                        <div class="lang-item">
+                            <span class="lang-name">Tigrinya</span>
+                            <span class="lang-level highlight-badge">Mother Tongue</span>
+                            <div class="lang-dots">
+                                <span class="dot-filled"></span>
+                                <span class="dot-filled"></span>
+                                <span class="dot-filled"></span>
+                                <span class="dot-filled"></span>
+                                <span class="dot-filled"></span>
+                            </div>
+                        </div>
+                        <div class="lang-item">
+                            <span class="lang-name">Amharic</span>
+                            <span class="lang-level">C2 Proficient</span>
+                            <div class="lang-dots">
+                                <span class="dot-filled"></span>
+                                <span class="dot-filled"></span>
+                                <span class="dot-filled"></span>
+                                <span class="dot-filled"></span>
+                                <span class="dot-filled"></span>
+                            </div>
+                        </div>
+                        <div class="lang-item">
+                            <span class="lang-name">English</span>
+                            <span class="lang-level">C2 Proficient</span>
+                            <div class="lang-dots">
+                                <span class="dot-filled"></span>
+                                <span class="dot-filled"></span>
+                                <span class="dot-filled"></span>
+                                <span class="dot-filled"></span>
+                                <span class="dot-filled"></span>
+                            </div>
+                        </div>
+                        <div class="lang-item">
+                            <span class="lang-name">French</span>
+                            <span class="lang-level">A1 Beginner</span>
+                            <div class="lang-dots">
+                                <span class="dot-filled"></span>
+                                <span class="dot-empty"></span>
+                                <span class="dot-empty"></span>
+                                <span class="dot-empty"></span>
+                                <span class="dot-empty"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interests -->
+                <div class="interests-box glass">
+                    <h3 class="box-title"><i class="fa-solid fa-heart"></i> Areas of Interest</h3>
+                    <div class="interests-tags">
+                        <span class="interest-tag"><i class="fa-solid fa-chart-line"></i> Data Science & Analytics</span>
+                        <span class="interest-tag"><i class="fa-solid fa-language"></i> Learning New Languages</span>
+                        <span class="interest-tag"><i class="fa-solid fa-people-group"></i> Community Engagement</span>
+                        <span class="interest-tag"><i class="fa-solid fa-book-open"></i> Reading & Research</span>
+                        <span class="interest-tag"><i class="fa-solid fa-earth-africa"></i> Travel & Exploration</span>
+                        <span class="interest-tag"><i class="fa-solid fa-code"></i> Algorithm Optimization</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">Let's Connect</span>
+                    <h2 class="section-title">Get in Touch</h2>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info-column">
+                        <h3>Connect with Me</h3>
+                        <p>Feel free to reach out for research collaboration, job opportunities, data science projects, or just to chat about numbers and algorithms!</p>
+                        
+                        <div class="info-details-list">
+                            <div class="info-detail-item">
+                                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Nairobi, Kenya</p>
+                                </div>
+                            </div>
+                            <div class="info-detail-item">
+                                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <h4>Email Address</h4>
+                                    <p><a href="mailto:abrhsamuel@gmail.com">abrhsamuel@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="info-detail-item">
+                                <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p><a href="tel:+254701211210">+254 701 211 210</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-column">
+                        <form id="contact-form" class="contact-form glass">
+                            <div class="form-group">
+                                <label for="form-name">Name</label>
+                                <input type="text" id="form-name" required placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Email</label>
+                                <input type="email" id="form-email" required placeholder="name@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-subject">Subject</label>
+                                <input type="text" id="form-subject" placeholder="Project collaboration, Hiring, etc.">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" rows="5" required placeholder="Write your message here..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <span class="btn-text">Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Samuel Abrha Gebremariam. All rights reserved.</p>
+            <p>Built with <i class="fa-solid fa-heart accent-red"></i> for high performance and premium design.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Project Modal Overlay -->
+    <div id="project-modal" class="modal-overlay">
+        <div class="modal-card glass">
+            <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <div id="modal-content-body">
+                <!-- Javascript will inject data dynamic here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Certificate Modal Overlay -->
+    <div id="cert-modal" class="modal-overlay">
+        <div class="modal-card cert-modal-card glass">
+            <button class="modal-close-btn cert-modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <div id="cert-modal-content-body">
+                <!-- Javascript will inject data dynamic here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Print/PDF Resume Window Layout (Hidden by default, used when user clicks Print Resume) -->
+    <div id="print-resume-layout" class="print-resume-hidden">
+        <!-- Structured printable resume representation of the portfolio -->
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
