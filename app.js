@@ -487,6 +487,13 @@ document.addEventListener('DOMContentLoaded', () => {
             description: "Verified capabilities in writing clean Python scripts, using NumPy arrays for numerical calculations, handling matrices, and analyzing dataset attributes.",
             verificationId: "DC-PY-887321"
         },
+        intermediate_python: {
+            title: "Intermediate Python Course",
+            issuer: "DataCamp",
+            date: "October 30, 2024",
+            description: "Completed the intermediate Python curriculum covering dictionaries, Pandas dataframes, control flow, loops, and random walk case studies.",
+            verificationId: "DC-INTPY-ecb7ff17"
+        },
         pandas: {
             title: "Data Manipulation with Pandas",
             issuer: "Datacamp Credentials",
@@ -507,6 +514,13 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "August 2023",
             description: "Validated expertise in handling joins, compiling multiple subqueries, applying common table expressions (CTEs), and computing running values using window functions.",
             verificationId: "DC-INTSQL-556782"
+        },
+        r_track: {
+            title: "R Programming Track",
+            issuer: "DataCamp",
+            date: "October 30, 2024",
+            description: "Completed the comprehensive R Programming track, verifying capabilities in writing clean R scripts, data visualization, and data manipulation.",
+            verificationId: "DC-R-TRACK-259160d5"
         },
         cleaning_r: {
             title: "Cleaning Data in R",
