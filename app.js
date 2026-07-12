@@ -298,6 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectsData = {
         bigdata: {
             title: "Big Data Medallion Architecture Workspace",
+            description: "Scalable big data pipelines implementing the Medallion (Bronze, Silver, Gold) architecture using Apache Spark, Hadoop, Kafka, SQL, and modern data engineering best practices.",
             tags: ["Python", "Spark", "Hadoop", "Kafka", "SQL", "ETL Pipelines"],
             problem: "Managing raw, messy unstructured datasets in real-time stream processing, avoiding bottlenecks, and ensuring data consistency across business intelligence dashboards.",
             methodology: [
@@ -314,6 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         fpl: {
             title: "Fantasy Premier League Squad Optimization Model",
+            description: "Here, we will apply analysis and optimization skills to select a squad for Fantasy Premier League 2025/2026.",
             tags: ["Python", "Pandas", "Linear Optimization (PuLP)", "Web API"],
             problem: "Evaluating hundreds of soccer players to pick a 15-player squad maximizing expected points under rigid budget constraints (£100m maximum) and squad compositions (e.g., limit of 3 players per club).",
             methodology: [
@@ -329,6 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         loan: {
             title: "Loan Default Risk Analysis & Executive Dashboard",
+            description: "This project aims to explore bank loan default data to uncover actionable insights through detailed analysis and visualizations. Leveraging advanced Excel functions, the project includes a dashboard that highlights key findings, such as loan default rates and the relationship between default risk and various factors.",
             tags: ["Excel", "Advanced Formulas", "VBA Macro Scripting", "Data Analysis"],
             problem: "Banking stakeholders lacked visibility into loan portfolios, leading to high default rates due to unsegmented risk groups.",
             methodology: [
@@ -344,6 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         sales: {
             title: "Sales Performance Analysis Business Dashboard",
+            description: "The Sales and Performance Analysis Dashboard project utilizes Microsoft Power BI to provide a comprehensive analysis of business performance across product lines, customer behavior, branch efficiency, temporal trends, and city-level insights. This interactive dashboard facilitates data-driven decision-making by presenting key performance indicators.",
             tags: ["Power BI", "DAX", "SQL Database", "Data Visualizations"],
             problem: "Disjointed revenue records across regional outlets prevented executive leadership from getting clear, unified feedback on seasonal sales indicators.",
             methodology: [
@@ -359,6 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         etl: {
             title: "Automated Data Warehousing ETL Pipeline",
+            description: "ETL Project-A complete Extract, Transform, Load pipeline using Python, Pandas, and SQLite. This project demonstrates data cleaning, enrichment, categorization, and database loading on simulated retail data.",
             tags: ["Python", "Pandas", "SQLite", "SQL", "ETL Systems"],
             problem: "Integrating fragmented client telemetry files containing null parameters, duplicate stamps, and incompatible formats into a clean database warehouse.",
             methodology: [
@@ -374,6 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         apriori: {
             title: "Association Rule Mining Transaction Simulation",
+            description: "Association rule mining project implementing the Apriori algorithm to identify purchasing patterns and customer buying behavior.",
             tags: ["Python", "mlxtend", "Apriori Model", "Market Basket Analysis"],
             problem: "Supermarkets and online shops fail to identify customer item affinities, missing opportunities for strategic product bundles and placement designs.",
             methodology: [
@@ -409,6 +415,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="modal-body-header">
                             <h2>${data.title}</h2>
                             <div class="modal-body-tags">${tagsHTML}</div>
+                        </div>
+                        
+                        <div class="modal-section">
+                            <h3><i class="fa-solid fa-circle-info"></i> Project Description</h3>
+                            <p>${data.description}</p>
                         </div>
                         
                         <div class="modal-section">
