@@ -733,8 +733,28 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = true;
             submitBtn.innerHTML = `<span class="btn-text">Sending...</span> <i class="fa-solid fa-circle-notch fa-spin"></i>`;
 
-            // Simulate form submission delay
-            setTimeout(() => {
+            // Submit actual request to FormSubmit AJAX endpoint
+            fetch("https://formsubmit.co/ajax/abrhsamuel@gmail.com", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    subject: subject || "Contact Form Submission",
+                    message: message
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error("Server response was not ok");
+                }
+            })
+            .then(data => {
                 submitBtn.innerHTML = `<span class="btn-text">Sent!</span> <i class="fa-solid fa-circle-check"></i>`;
                 submitBtn.style.background = 'var(--accent-cyan)';
                 
@@ -746,7 +766,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <h2 style="font-size: 2rem; margin-bottom: 12px; font-family: 'Space Grotesk', sans-serif;">Message Sent!</h2>
                         <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto;">
-                            Thank you for reaching out, <strong>${name}</strong>. Your message regarding "${subject || 'General Inquiry'}" has been successfully logged. Samuel will contact you shortly at <strong>${email}</strong>.
+                            Thank you for reaching out, <strong>${name}</strong>. Your message regarding "${subject || 'General Inquiry'}" has been successfully forwarded to Samuel. He will contact you shortly at <strong>${email}</strong>.
                         </p>
                         <button class="btn btn-primary" id="btn-close-success" style="padding: 10px 30px;">Great</button>
                     </div>
@@ -766,8 +786,34 @@ document.addEventListener('DOMContentLoaded', () => {
                     submitBtn.innerHTML = originalBtnHTML;
                     submitBtn.style.background = '';
                 }, 1000);
+            })
+            .catch(error => {
+                console.error("Error submitting form:", error);
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHTML;
+                submitBtn.style.background = '';
+                
+                // Show error feedback modal overlay
+                modalContentBody.innerHTML = `
+                    <div class="modal-body-wrapper" style="text-align: center; padding: 20px 0;">
+                        <div class="cert-icon" style="margin: 0 auto 20px auto; width: 70px; height: 70px; background: rgba(239, 68, 68, 0.08); border-color: rgba(239, 68, 68, 0.3); font-size: 2.2rem; color: #ef4444; box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <h2 style="font-size: 2rem; margin-bottom: 12px; font-family: 'Space Grotesk', sans-serif; color: #ef4444;">Submission Failed</h2>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto;">
+                            We encountered an error trying to send your message. Please try again later or reach out directly at <strong>abrhsamuel@gmail.com</strong>.
+                        </p>
+                        <button class="btn btn-secondary" id="btn-close-error" style="padding: 10px 30px;">Close</button>
+                    </div>
+                `;
+                
+                modalOverlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
 
-            }, 1500);
+                document.getElementById('btn-close-error').addEventListener('click', () => {
+                    closeModal();
+                });
+            });
         });
     }
 
